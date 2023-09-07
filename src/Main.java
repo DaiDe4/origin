@@ -43,5 +43,11 @@ public class Main {
         System.out.print("\n");
         System.out.print("Максимальное значение:");
         System.out.print(maxi);
+        System.out.print("\n");
+
+        for (i = 1; i < 11; i++) {
+            System.out.print(1./i);
+            System.out.print("\n");
+        }
     }
 }
