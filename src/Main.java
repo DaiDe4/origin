@@ -1,17 +1,47 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!\n");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 8; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int[] b = new int[10];
+        int j = 0;
+        int i;
+        int sum = 0;
+        int sr_zn = 0;
+        for(j = 0; j < 10;j++)
+        {
+            System.out.print("Введитецелоечисло: ");
+            if(sc.hasNextInt()) {
+                i = sc.nextInt();
+                b[j] = i;
+                sum += i;
+            }
         }
+        System.out.print("Среднее значение:");
+        System.out.print(sum / 10);
+        System.out.print('\n');
+
+        Scanner scr = new Scanner(System.in);
+        int[] bi = new int[10];
+        int k = 0;
+        int l;
+        int maxi = -101011;
+        int mini = 101001;
+        while(k < 10)
+        {
+            System.out.print("Введитецелоечисло: ");
+            if(sc.hasNextInt()) {
+                l = sc.nextInt();
+                bi[k] = l;
+                maxi = Integer.max(l, maxi);
+                mini = Integer.min(l, mini);
+                k++;
+            }
+        }
+        System.out.print("Минимальное значение:");
+        System.out.print(mini);
+        System.out.print("\n");
+        System.out.print("Максимальное значение:");
+        System.out.print(maxi);
     }
 }
