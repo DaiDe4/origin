@@ -1,5 +1,14 @@
 import java.util.Scanner;
+
 public class Main {
+
+    public static int factorial(int f){
+        int res = 1;
+        for (int i = 1; i <= f; i++) {
+            res *= i;
+        }
+        return res;
+    }
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -10,7 +19,7 @@ public class Main {
         int sr_zn = 0;
         for(j = 0; j < 10;j++)
         {
-            System.out.print("Введитецелоечисло: ");
+            System.out.print("Введите_целое_число: ");
             if(sc.hasNextInt()) {
                 i = sc.nextInt();
                 b[j] = i;
@@ -21,7 +30,6 @@ public class Main {
         System.out.print(sum / 10);
         System.out.print('\n');
 
-        Scanner scr = new Scanner(System.in);
         int[] bi = new int[10];
         int k = 0;
         int l;
@@ -29,7 +37,7 @@ public class Main {
         int mini = 101001;
         while(k < 10)
         {
-            System.out.print("Введитецелоечисло: ");
+            System.out.print("Введите_целое_число: ");
             if(sc.hasNextInt()) {
                 l = sc.nextInt();
                 bi[k] = l;
@@ -49,5 +57,14 @@ public class Main {
             System.out.print(1./i);
             System.out.print("\n");
         }
+
+        for (int q = 0; q < args.length; q++) {
+            System.out.println("Аргумент " + (q+1) + ": " + args[q]);
+        }
+        System.out.print("Введите_целое_число_для_подсчёта_факториала:\n");
+        l = sc.nextInt();
+        System.out.print("Факториал:" + factorial(l));
+
     }
+
 }
