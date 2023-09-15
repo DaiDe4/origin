@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -26,24 +27,35 @@ public class Main {
                 sum += i;
             }
         }
+        sc.next();
         System.out.print("Среднее значение:");
         System.out.print(sum / 10);
         System.out.print('\n');
 
-        int[] bi = new int[10];
-        int k = 0;
+        ArrayList<Integer> list = new ArrayList<>();
         int l;
-        int maxi = -101011;
-        int mini = 101001;
-        while(k < 10)
+        int k = 1;
+        int maxi = 0;
+        int mini = 0;
+        boolean Flag = true;
+        System.out.print("Для заверщения работы напишите 'Y' ");
+        while(Flag)
         {
-            System.out.print("Введите_целое_число: ");
+
+            System.out.print("Введите_целое_число или Y: ");
             if(sc.hasNextInt()) {
                 l = sc.nextInt();
-                bi[k] = l;
+                if (k == 1){
+                    k = 0;
+                    maxi = l;
+                    mini = l;
+                }
+                list.add(l);
                 maxi = Integer.max(l, maxi);
                 mini = Integer.min(l, mini);
-                k++;
+            }
+            else{
+                break;
             }
         }
         System.out.print("Минимальное значение:");
@@ -62,6 +74,7 @@ public class Main {
             System.out.println("Аргумент " + (q+1) + ": " + args[q]);
         }
         System.out.print("Введите_целое_число_для_подсчёта_факториала:\n");
+        sc.next();
         l = sc.nextInt();
         System.out.print("Факториал:" + factorial(l));
 
