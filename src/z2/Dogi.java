@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class task_2 {
+public class Dogi {
     public static void main(String[] args) {
 
         Dog doga = new Dog("Nora", 10);
