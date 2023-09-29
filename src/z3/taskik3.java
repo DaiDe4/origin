@@ -14,6 +14,7 @@ public class taskik3 {
             System.out.println(Arrays.toString(array_1));
             Arrays.sort(array_1);
             System.out.println(Arrays.toString(array_1));
+
             System.out.println("Сортировка вторым подходом");
 
             double[] array_2 = new double[10];

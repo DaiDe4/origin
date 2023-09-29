@@ -1,6 +1,5 @@
 package z2;
 
-import java.io.PrintStream;
 
 class Point {
     private double x;
