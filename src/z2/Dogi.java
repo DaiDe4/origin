@@ -1,3 +1,5 @@
+package z2;
+
 import java.util.*;
 
 public class Dogi {
