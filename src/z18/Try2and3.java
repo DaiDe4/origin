@@ -7,6 +7,7 @@ public class Try2and3 {
         Scanner myScanner = new Scanner(System.in);
         System.out.print("Enter an integer ");
         String intString = myScanner.next();
+        myScanner.close();
         try {
             int i = Integer.parseInt(intString);
             System.out.println(2/i);
