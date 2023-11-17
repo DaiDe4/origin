@@ -12,7 +12,8 @@ public class MainConv extends ConvValue {
             ConvValue ien = new ConvValue();
             ien.setValue(ruble);
             System.out.println("Сумма в йенах:");
-            ien.RublToIen();
+            ien.rublToIen();
+            sc.close();
         }
     }
 }

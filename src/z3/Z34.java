@@ -22,6 +22,7 @@ public class Z34 {
                 }
             }
         }
+        sc.close();
         int[] array = new int[n];
         Random rand = new Random();
         for (int i = 0; i < array.length; ++i) {

@@ -9,7 +9,7 @@ public class ConvValue {
     public void setValue(double value) {
         Value = value;
     }
-    public void RublToIen(){
+    public void rublToIen(){
         double rez = Value*1.6;
         System.out.println(rez);
     }
