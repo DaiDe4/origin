@@ -1,12 +1,11 @@
 package z26;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class t2 {
 
-    public class CustomList<T> implements Iterable<T> {
+    public static class CustomList<T> implements Iterable<T> {
         private Node<T> head;
         private int size;
 
@@ -82,11 +81,13 @@ public class t2 {
             }
         }
     }
-    public void main(String[] args) {
+
+    public static void main(String[] args) {
         CustomList<String> list = new CustomList<>();
         list.add("Apple");
         list.add("Banana");
         list.add("Cherry");
+        list.add("Pineapple");
 
         for (String fruit : list) {
             System.out.println(fruit);
