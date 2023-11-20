@@ -6,7 +6,6 @@ public class T1 {
     private BigInteger innNum;
 
     public T1(BigInteger inn){
-        super("ИНН с номером "+ inn + " не действителен!");
         innNum = inn;
     }
 
