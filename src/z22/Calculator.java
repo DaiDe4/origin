@@ -44,21 +44,18 @@ public class Calculator {
     }
 
     private static double performOperation(double o1, double o2, String o) {
-        switch (o) {
-            case "+":
-                return o1 + o2;
-            case "-":
-                return o1 - o2;
-            case "*":
-                return o1 * o2;
-            case "/":
+        return switch (o) {
+            case "+" -> o1 + o2;
+            case "-" -> o1 - o2;
+            case "*" -> o1 * o2;
+            case "/" -> {
                 if (o2 == 0) {
                     throw new ArithmeticException("Division by zero");
                 }
-                return o1 / o2;
-            default:
-                throw new IllegalArgumentException("Invalid operator: " + o);
-        }
+                yield o1 / o2;
+            }
+            default -> throw new IllegalArgumentException("Invalid operator: " + o);
+        };
     }
 
     public static void main(String[] args) {
