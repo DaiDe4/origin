@@ -2,7 +2,7 @@ package z22;
 
 import java.util.Stack;
 
-public class Calculator {
+public class CalculatorPolska {
     public static double rpncal(String expression) {
         String[] ts = expression.split(" ");
         Stack<Double> stack = new Stack<>();
