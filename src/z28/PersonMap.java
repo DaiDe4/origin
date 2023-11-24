@@ -18,7 +18,7 @@ public class PersonMap {
         Map<String, String> map = new HashMap<>();
         map.put("Литвинов", "Михаил");
         map.put("Галай", "Григорий");
-        map.put("Грейераст", "Анна");
+        map.put("Грейерат", "Анна");
         map.put("Козлова", "Анна");
         map.put("Бадык", "Александр");
         map.put("Попова", "Евгения");
@@ -38,10 +38,10 @@ public class PersonMap {
         int count = 0;
         for (int valueCount : firstNameCountMap.values()) {
             if (valueCount > 1) {
-                count += valueCount - 1;
+                count += valueCount;
             }
         }
-        return count*2;
+        return count;
     }
 
     public static int getLastNameCount(Map<String, String> map) {
@@ -53,10 +53,10 @@ public class PersonMap {
         int count = 0;
         for (int keyCount : lastNameCountMap.values()) {
             if (keyCount > 1) {
-                count += keyCount - 1;
+                count += keyCount;
             }
         }
-        return count*2;
+        return count;
     }
 }
 

@@ -8,7 +8,7 @@ public class z29 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int sum = 0;
-        int temp = 0;
+        int temp;
 
         for (int i = 0; i < n * n; i++) {
             temp = scanner.nextInt();
