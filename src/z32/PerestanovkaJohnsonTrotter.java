@@ -1,4 +1,4 @@
-package Task32;
+package z32;
 
 import java.util.Scanner;
 
