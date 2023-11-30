@@ -6,9 +6,10 @@ class HashTable<K, V> {
     private final LinkedList<KeyPairValueKV1<K, V>>[] table;
     private final int capacity;
 
+    @SuppressWarnings("unchecked")
     public HashTable(int capacity) {
         this.capacity = capacity;
-        table = new LinkedList[capacity];
+        table = (LinkedList<KeyPairValueKV1<K, V>>[])new LinkedList[capacity];
         for (int i = 0; i < capacity; i++) {
             table[i] = new LinkedList<>();
         }

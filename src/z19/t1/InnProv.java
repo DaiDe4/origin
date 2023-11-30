@@ -5,18 +5,19 @@ import java.util.Scanner;
 
 public class InnProv {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            System.out.println("Введите номер ИНН");
-            try {
-                BigInteger inn = new BigInteger(sc.nextLine());
-                checkInn(inn);
-                break;
-            } catch (InnNotGood e) {
-                System.out.println(e.getLocalizedMessage());
+        try (Scanner sc = new Scanner(System.in)) {
+            while (true) {
+                System.out.println("Введите номер ИНН");
+                try {
+                    BigInteger inn = new BigInteger(sc.nextLine());
+                    checkInn(inn);
+                    break;
+                } catch (InnNotGood e) {
+                    System.out.println(e.getLocalizedMessage());
+                }
             }
+            System.out.println("ИНН действителен!");
         }
-        System.out.println("ИНН действителен!");
     }
 
     public static void checkInn(BigInteger inn) throws InnNotGood {
