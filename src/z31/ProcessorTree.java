@@ -211,12 +211,10 @@ class ProcessorTree {
         }
         return printOrder;
     }
-
     private int getRecordKey(Scanner scanner, String action) {
         System.out.println("Enter the key of the record to " + action + ": ");
         return scanner.nextInt();
     }
-
     private void addRecord(Scanner scanner, int key) {
         System.out.println("Enter processor name: ");
         String processorName = scanner.next();
@@ -244,19 +242,16 @@ class ProcessorTree {
         if (root == null || root.key == key) {
             return root;
         }
-
         if (key < root.key) {
             return search(root.left, key);
         } else {
             return search(root.right, key);
         }
-
     }
 
     public static void main(String[] args) {
         ProcessorTree processorTree = new ProcessorTree();
         try (Scanner scanner = new Scanner(System.in)) {
-
             while (true) {
                 System.out.println("Enter command (L/D/A/S/E): ");
                 String command = scanner.next();
